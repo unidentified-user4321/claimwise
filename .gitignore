@@ -1,0 +1,37 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+.pytest_cache/
+
+# Frontend
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Temporary artifacts / logs
+artifacts/
+*.log
+
+# ML generated artifacts
+ml/artifacts/*
+!ml/artifacts/.gitkeep
+
+# ML datasets
+ml/data/*
+!ml/data/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow generated files
+mlruns/
+ml/mlruns/
+ml/mlflow.db
+ml/mlflow.db-*

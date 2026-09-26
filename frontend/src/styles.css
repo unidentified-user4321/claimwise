@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --paper: #f6f5f0; --ink: #172322; --muted: #71807c; --line: #e2e5df; --teal: #167c72; --mint: #a8e6cf; --coral: #c85b48; --amber: #b87925; }
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; min-width: 320px; font-family: "DM Sans", sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+@layer components {
+  .sidebar { @apply fixed bottom-0 left-0 top-0 z-40 w-[260px] bg-ink transition-transform duration-300; }
+  .brand-mark { @apply inline-flex h-9 w-9 items-center justify-center rounded-xl bg-teal text-white; }
+  .nav-link { @apply flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-white/50 transition hover:bg-white/10 hover:text-white; }
+  .nav-link-active { @apply bg-white/10 text-white; }
+  .card { @apply rounded-2xl border border-line bg-white p-5 md:p-6; }
+  .button { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:border-ink/20 hover:bg-paper; }
+  .button-dark { @apply border-ink bg-ink text-white hover:bg-teal hover:text-white; }
+  .field { @apply min-h-11 w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-teal focus:ring-4 focus:ring-teal/10; }
+  .eyebrow { @apply text-[10px] font-bold uppercase tracking-[0.19em] text-teal; }
+  .section-title { @apply mt-2 font-display text-2xl font-semibold tracking-tight text-ink; }
+  .section-icon { @apply inline-flex h-10 w-10 items-center justify-center rounded-xl bg-teal/10 text-teal; }
+  .stat-card { @apply relative overflow-hidden; }
+  .stat-icon { @apply mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl; }
+  .stat-label { @apply text-xs font-bold uppercase tracking-[0.15em] text-muted; }
+  .stat-value { @apply mt-2 font-display text-3xl font-semibold tracking-tight text-ink; }
+  .stat-note { @apply mt-1 text-xs text-muted; }
+  .status { @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em]; }
+  .status-submitted { @apply bg-teal/10 text-teal; }
+  .status-under_review { @apply bg-amber/15 text-amber; }
+  .status-awaiting_information { @apply bg-amber/15 text-amber; }
+  .status-approved { @apply bg-mint/30 text-teal; }
+  .status-rejected { @apply bg-coral/10 text-coral; }
+  .status-closed { @apply bg-ink/10 text-muted; }
+  .avatar { @apply inline-flex h-8 w-8 items-center justify-center rounded-full bg-ink text-xs font-bold text-mint; }
+  .role-card { @apply flex min-h-28 flex-col items-start gap-2 rounded-2xl border border-line bg-white p-4 text-left text-muted transition hover:border-teal/40 hover:bg-teal/5; }
+  .role-card-active { @apply border-teal bg-teal/5 text-teal ring-4 ring-teal/10; }
+  .role-card span { @apply font-semibold text-ink; }
+  .role-card small { @apply text-xs leading-4 text-muted; }
+  .success-mark { @apply flex h-16 w-16 items-center justify-center rounded-2xl bg-mint text-teal; }
+  .pulse-dot { @apply inline-block h-2 w-2 animate-pulse rounded-full bg-teal; }
+}

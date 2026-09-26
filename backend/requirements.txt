@@ -1,0 +1,22 @@
+# Backend API, PostgreSQL, ML model loading, and policy RAG dependencies.
+# Use Python 3.12 for this set; langchain-pinecone 0.2.13 requires Python <3.14.
+
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+SQLAlchemy>=2,<3
+psycopg[binary]>=3.2,<4
+alembic>=1.15,<2
+pydantic>=2.10,<3
+python-dotenv>=1,<2
+
+# Load saved fraud/NLP pipelines in the backend.
+joblib>=1.4,<2
+pandas>=2.2,<3
+scikit-learn>=1.6,<2
+xgboost>=2.1,<4
+
+# Policy chunking, Gemini embeddings, and Pinecone retrieval.
+langchain-core>=0.3.52,<2
+langchain-text-splitters>=0.3,<2
+langchain-google-genai>=2,<4
+langchain-pinecone==0.2.13
