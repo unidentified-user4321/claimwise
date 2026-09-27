@@ -18,7 +18,8 @@ function RoleRoute({
   role: "client" | "employee";
   children: React.ReactNode;
 }) {
-  const { session } = useSession();
+  const { session, loading } = useSession();
+  if (loading) return <p role="status">Loading your workspace...</p>;
   if (!session) return <Navigate to="/login" replace />;
   if (session.role !== role)
     return (

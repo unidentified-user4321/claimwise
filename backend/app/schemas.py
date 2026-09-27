@@ -4,6 +4,7 @@ from datetime import date, datetime
 from decimal import Decimal
 
 from pydantic import BaseModel, ConfigDict, Field
+from typing import Literal
 
 
 class ClaimCreate(BaseModel):
@@ -220,3 +221,16 @@ class ClaimContextRead(BaseModel):
     vehicle: VehicleContextRead
     previous_claims: list[PreviousClaimContextRead]
     derived: ClaimContextDerived
+
+
+class LinkCustomerRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    customer_id: str = Field(min_length=1, max_length=50)
+
+
+class UserRead(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    user_id: str
+    clerk_user_id: str
+    role: Literal["client", "employee"]
+    customer_id: str | None

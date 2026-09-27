@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional evaluation runner; never imported by app startup or pytest.
+langsmith>=0.14,<0.15

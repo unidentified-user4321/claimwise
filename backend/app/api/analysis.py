@@ -3,12 +3,13 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
+from app.auth import require_employee
 from app.db.database import get_db
 from app.services.analysis import analyze_claim as run_claim_analysis
 from app.db.models import ClaimAnalysis
 
 
-router = APIRouter(prefix="/claims", tags=["analysis"])
+router = APIRouter(prefix="/claims", tags=["analysis"], dependencies=[Depends(require_employee)])
 
 
 @router.post("/{claim_id}/analyze")

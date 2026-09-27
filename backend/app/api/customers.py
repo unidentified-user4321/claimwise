@@ -4,15 +4,17 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
-from app.db.models import Customer
+from app.auth import get_current_user
+from app.db.models import Customer, User
 
 
 router = APIRouter(prefix="/customers")
 
 
 @router.get("/{customer_id}", response_model=dict[str, str])
-def get_customer_identity(customer_id: str, db: Session = Depends(get_db)):
-    """Read-only identity check for the local workspace; not authentication."""
+def get_customer_identity(customer_id: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    if user.role == "client" and user.customer_id != customer_id:
+        raise HTTPException(404, "Customer not found")
     customer = db.get(Customer, customer_id)
     if customer is None:
         raise HTTPException(status_code=404, detail="Customer ID not found. Please check the ID and try again.")

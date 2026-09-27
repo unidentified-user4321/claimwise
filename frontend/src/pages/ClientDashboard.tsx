@@ -26,18 +26,18 @@ export function ClientDashboard() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    if (!session?.userId) return;
+    if (!session?.customerId) return;
     let cancelled = false;
     setLoading(true);
     setError("");
     api
-      .listClaims({ customer_id: session.userId })
+      .listClaims({ customer_id: session.customerId })
       .then((items) => { if (!cancelled) setClaims(items); })
       .catch((err: Error) => { if (!cancelled) setError(err.message); })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [session?.userId]);
-  const mine = claims.filter((claim) => claim.customer_id === session?.userId)
+  }, [session?.customerId]);
+  const mine = claims.filter((claim) => claim.customer_id === session?.customerId)
     .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
   const reviewCount = mine.filter((claim) =>
     ["submitted", "under_review"].includes(claim.status),

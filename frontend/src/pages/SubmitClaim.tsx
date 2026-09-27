@@ -39,7 +39,7 @@ export function SubmitClaim() {
   const update = (name: FormKey, value: string) => setForm((current) => ({ ...current, [name]: value }));
   async function submit(event: React.FormEvent) {
     event.preventDefault();
-    if (pending.current || !session) return;
+    if (pending.current || !session || session.role !== "client") return;
     if ([form.policy_id, form.incident_type, form.incident_location, form.claim_description].some((value) => !value.trim())) {
       setError("Please complete all required fields."); return;
     }
@@ -47,7 +47,7 @@ export function SubmitClaim() {
     const nullable = (value: string) => value.trim() || null;
     const boolean = (value: string) => value === "" ? null : value === "yes";
     const payload: ClaimCreatePayload = {
-      customer_id: session.userId, policy_id: form.policy_id.trim(), incident_type: form.incident_type.trim(),
+      customer_id: session.customerId, policy_id: form.policy_id.trim(), incident_type: form.incident_type.trim(),
       incident_date: form.incident_date, incident_location: form.incident_location.trim(),
       number_of_vehicles_involved: Number(form.number_of_vehicles_involved), bodily_injuries: Number(form.bodily_injuries),
       witnesses: Number(form.witnesses), total_claim_amount: form.total_claim_amount,
@@ -84,7 +84,7 @@ export function SubmitClaim() {
         <Card><Field label="What happened?" hint="Required"><Textarea required value={form.claim_description} onChange={(e) => update("claim_description", e.target.value)} placeholder="Describe the incident, damage, and what happened next..." /></Field></Card>
         {error && <ErrorState message={error} />}
         <Card className="bg-ink text-white"><p className="eyebrow text-mint">Ready to submit?</p>
-          <p className="mt-3 text-sm leading-6 text-white/60">Your report will be stored with <span className="font-mono text-white/80">{session?.userId}</span> as the customer.</p>
+          <p className="mt-3 text-sm leading-6 text-white/60">Your report will be stored with <span className="font-mono text-white/80">{session?.customerId}</span> as the customer.</p>
           <Button disabled={submitting} type="submit" className="mt-6 w-full bg-mint text-ink hover:bg-white">{submitting ? "Submitting..." : "Submit claim"}<ArrowRight size={17} /></Button>
         </Card>
       </div>

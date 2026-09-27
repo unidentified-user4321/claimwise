@@ -21,21 +21,21 @@ export function MyClaims() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    if (!session?.userId) return;
+    if (!session?.customerId) return;
     let cancelled = false;
     setLoading(true);
     setError("");
     api
-      .listClaims({ customer_id: session.userId })
+      .listClaims({ customer_id: session.customerId })
       .then((items) =>
         !cancelled && setClaims(
-          items.filter((claim) => claim.customer_id === session.userId),
+          items.filter((claim) => claim.customer_id === session.customerId),
         ),
       )
       .catch((err: Error) => { if (!cancelled) setError(err.message); })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [session?.userId]);
+  }, [session?.customerId]);
   const filtered = claims.filter((claim) =>
     `${claim.claim_id} ${claim.policy_id} ${claim.incident_location} ${claim.status}`
       .toLowerCase()

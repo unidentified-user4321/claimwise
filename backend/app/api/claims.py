@@ -14,7 +14,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
-from app.db.models import Claim
+from app.auth import get_current_user, require_employee
+from app.db.models import Claim, Policy, User
 from app.services.claim_context import load_claim_context
 from app.services.claim_similarity import find_similar_claims
 from app.services.claim_review import perform_review_action
@@ -44,6 +45,7 @@ def get_similar_claims(
     claim_id: str,
     limit: int = Query(default=5, ge=1, le=20),
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
     return find_similar_claims(db, claim_id, limit)
 
@@ -60,7 +62,12 @@ def get_similar_claims(
 def create_claim(
     payload: ClaimCreate,
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
+    if user.role == "client":
+        policy = db.get(Policy, payload.policy_id)
+        if payload.customer_id != user.customer_id or policy is None or policy.customer_id != user.customer_id:
+            raise HTTPException(403, "Claims must use your own customer and policy")
     claim = Claim(**payload.model_dump())
 
     db.add(claim)
@@ -97,7 +104,12 @@ def list_claims(
         le=100,
     ),
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
+    if user.role == "client":
+        if customer_id is not None and customer_id != user.customer_id:
+            raise HTTPException(403, "Cannot access another customer")
+        customer_id = user.customer_id
     query = select(Claim)
 
     # Employee dashboard:
@@ -134,10 +146,11 @@ def list_claims(
 def get_claim(
     claim_id: str,
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     claim = db.get(Claim, claim_id)
 
-    if claim is None:
+    if claim is None or (user.role == "client" and claim.customer_id != user.customer_id):
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Claim not found",
@@ -157,6 +170,7 @@ def get_claim(
 def get_claim_context(
     claim_id: str,
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
     return load_claim_context(
         claim_id,
@@ -175,15 +189,16 @@ def update_claim(
     claim_id: str,
     payload: ClaimPatch,
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
     updates = payload.model_dump(exclude_unset=True, exclude_none=True)
     if "status" in updates:
-        # TODO: derive actor identity from authentication when available.
         change_claim_status(
             db,
             claim_id,
             updates.pop("status"),
             claim_updates=updates,
+            actor_type=user.role, actor_id=user.user_id,
         )
         return db.get(Claim, claim_id)
 
@@ -215,6 +230,7 @@ def update_claim(
 def delete_claim(
     claim_id: str,
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
     claim = db.get(Claim, claim_id)
 
@@ -241,9 +257,9 @@ def update_claim_status(
     claim_id: str,
     payload: ClaimStatusUpdate,
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
-    # TODO: derive actor identity from authentication when available.
-    return change_claim_status(db, claim_id, payload.status, note=payload.note)
+    return change_claim_status(db, claim_id, payload.status, note=payload.note, actor_type=user.role, actor_id=user.user_id)
 
 
 
@@ -251,7 +267,7 @@ def update_claim_status(
 
 
 @router.get("/{claim_id}/history", response_model=list[ClaimHistoryResponse])
-def get_claim_history(claim_id: str, db: Session = Depends(get_db)):
+def get_claim_history(claim_id: str, db: Session = Depends(get_db), user: User = Depends(require_employee)):
     return load_claim_history(db, claim_id)
 
 
@@ -260,6 +276,6 @@ def review_claim(
     claim_id: str,
     payload: ClaimReviewActionRequest,
     db: Session = Depends(get_db),
+    user: User = Depends(require_employee),
 ):
-    # TODO: derive actor identity from authentication when available.
-    return perform_review_action(db, claim_id, payload.action, note=payload.note)
+    return perform_review_action(db, claim_id, payload.action, note=payload.note, actor_type=user.role, actor_id=user.user_id)

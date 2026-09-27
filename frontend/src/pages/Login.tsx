@@ -4,8 +4,9 @@ import {
   ShieldCheck,
   UserRound,
 } from "lucide-react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { SignIn, SignUp, useAuth } from "@clerk/react";
 import type { Role } from "../types/api";
 import { useSession } from "../services/session";
 import { api } from "../services/api";
@@ -13,26 +14,38 @@ import { Button, Field, Input } from "../components/ui";
 
 export function Login() {
   const navigate = useNavigate();
-  const { signIn } = useSession();
-  const [role, setRole] = useState<Role>("client");
+  const [params, setParams] = useSearchParams();
+  const workspace: Role = params.get("workspace") === "employee" ? "employee" : "client";
+  const registering = workspace === "client" && params.get("mode") === "signup";
+  const { isLoaded, isSignedIn } = useAuth();
+  const { session, loading, needsLink, error: sessionError, refreshUser, signOut } = useSession();
   const [customerId, setCustomerId] = useState("");
-  const [employeeId, setEmployeeId] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const redirectUrl = `/login?workspace=${workspace}`;
+  const mismatch = session && session.role !== workspace
+    ? `This account belongs to the ${session.role === "employee" ? "Employee" : "Client"} workspace.` : "";
 
-  async function handleSubmit(event: React.FormEvent) {
-    event.preventDefault();
-    setError("");
-    setSubmitting(true);
-    try {
-      const localSession = await api.createLocalSession(role, role === "client" ? customerId : employeeId);
-      signIn(localSession.role, localSession.user_id);
-      navigate(role === "employee" ? "/employee" : "/client");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not start the demo session.");
-    } finally {
-      setSubmitting(false);
+  useEffect(() => {
+    if (session && session.role === workspace) {
+      navigate(session.role === "employee" ? "/employee" : "/client", { replace: true });
     }
+  }, [session?.userId, session?.role, workspace, navigate]);
+
+  function selectWorkspace(role: Role) {
+    setParams({ workspace: role });
+    setError("");
+  }
+
+  async function linkCustomer(event: React.FormEvent) {
+    event.preventDefault();
+    setError(""); setSubmitting(true);
+    try {
+      await api.linkCustomer(customerId.trim());
+      refreshUser();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not link customer.");
+    } finally { setSubmitting(false); }
   }
 
   return (
@@ -79,55 +92,69 @@ export function Login() {
           </div>
           <p className="eyebrow">Welcome back</p>
           <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink">
-            Choose your workspace.
+            {registering ? "Register as Client" : "Sign in to your workspace."}
           </h2>
           <div className="mt-8 grid grid-cols-2 gap-3">
             <button
+              type="button"
               disabled={submitting}
-              onClick={() => {
-                setRole("client");
-                setError("");
-              }}
-              className={`role-card ${role === "client" ? "role-card-active" : ""}`}
+              aria-pressed={workspace === "client"}
+              onClick={() => selectWorkspace("client")}
+              className={`role-card ${workspace === "client" ? "role-card-active" : ""}`}
             >
               <UserRound size={19} />
               <span>Client</span>
               <small>Submit and track claims</small>
             </button>
             <button
+              type="button"
               disabled={submitting}
-              onClick={() => {
-                setRole("employee");
-                setError("");
-              }}
-              className={`role-card ${role === "employee" ? "role-card-active" : ""}`}
+              aria-pressed={workspace === "employee"}
+              onClick={() => selectWorkspace("employee")}
+              className={`role-card ${workspace === "employee" ? "role-card-active" : ""}`}
             >
               <BriefcaseBusiness size={19} />
               <span>Employee</span>
               <small>Review the claim queue</small>
             </button>
           </div>
-          <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-            <p className="text-sm leading-6 text-muted">
-              Enter a local demo workspace to submit or review claims.
-            </p>
-            <Field label={role === "client" ? "Customer ID" : "Employee ID"}>
-              <Input
-                required
-                disabled={submitting}
-                value={role === "client" ? customerId : employeeId}
-                onChange={(event) => {
-                  if (role === "client") setCustomerId(event.target.value);
-                  else setEmployeeId(event.target.value);
-                  setError("");
-                }}
-              />
-            </Field>
-            {error && <p role="alert" className="text-sm text-coral">{error}</p>}
-            <Button disabled={submitting} type="submit" className="button-dark w-full">
-              {submitting ? "Starting workspace..." : "Enter workspace"} <ArrowRight size={17} />
-            </Button>
-          </form>
+          <div className="mt-8 space-y-5">
+            {(!isLoaded || loading) ? <p role="status">Loading your workspace...</p> : !isSignedIn ? (
+              registering ? <SignUp routing="hash" signInUrl="/login?workspace=client"
+                forceRedirectUrl={redirectUrl} /> :
+              <SignIn key={workspace} routing="hash" withSignUp={false} transferable={workspace === "client"}
+                appearance={workspace === "employee" ? { elements: { footerAction: { display: "none" } } } : undefined}
+                signUpUrl="/login?workspace=client&mode=signup"
+                forceRedirectUrl={redirectUrl} signUpForceRedirectUrl="/login?workspace=client" />
+            ) : <>
+              {sessionError ? <>
+                <p role="alert" className="text-sm text-coral">{sessionError}</p>
+                <Button onClick={refreshUser}>Retry</Button>
+              </> : mismatch ? <p role="alert" className="text-sm text-coral">{mismatch}</p>
+              : session ? <Button className="button-dark w-full"
+                onClick={() => navigate(session.role === "employee" ? "/employee" : "/client")}>
+                Enter {workspace === "employee" ? "Employee" : "Client"} workspace <ArrowRight size={17} />
+              </Button> : needsLink && workspace === "client" ? (
+                <form onSubmit={linkCustomer} className="space-y-5">
+                  <p className="text-sm text-muted">Link your existing Customer ID to continue.</p>
+                  <Field label="Customer ID">
+                    <Input required maxLength={50} disabled={submitting} value={customerId}
+                      onChange={event => setCustomerId(event.target.value)} />
+                  </Field>
+                  <Button type="submit" disabled={submitting} className="button-dark w-full">
+                    {submitting ? "Linking..." : "Link customer"}
+                  </Button>
+                </form>
+              ) : needsLink ? <div className="space-y-3">
+                <p className="text-sm text-muted">This account has no employee mapping. Ask the project maintainer to provision it.</p>
+                <Button onClick={refreshUser}>Retry</Button>
+              </div> : null}
+              {error && <p role="alert" className="text-sm text-coral">{error}</p>}
+              <button type="button" className="text-sm text-ink underline" onClick={() => void signOut()}>
+                Sign out
+              </button>
+            </>}
+          </div>
         </div>
       </section>
     </main>

@@ -2,69 +2,19 @@
 
 from datetime import date, datetime
 import unittest
+import pytest
 from unittest.mock import patch
 
-from fastapi import FastAPI, HTTPException
-from fastapi.testclient import TestClient
-from sqlalchemy import create_engine, event, select
+from fastapi import HTTPException
+from sqlalchemy import event, select
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy.orm import Session
-from sqlalchemy.pool import StaticPool
 
-from app.api.claims import router
-from app.db.database import Base, get_db
-from app.db.models import Claim, ClaimHistory, Customer, Policy
+from app.db.models import Claim, ClaimHistory
 from app.services.claim_status import get_claim_history, update_claim_status
 
 
+@pytest.mark.usefixtures("claim_case")
 class ClaimStatusTests(unittest.TestCase):
-    def setUp(self):
-        self.engine = create_engine(
-            "sqlite://", poolclass=StaticPool,
-            connect_args={"check_same_thread": False},
-        )
-
-        @event.listens_for(self.engine, "connect")
-        def enable_foreign_keys(connection, _):
-            connection.execute("PRAGMA foreign_keys=ON")
-
-        Base.metadata.create_all(
-            self.engine,
-            tables=[Customer.__table__, Policy.__table__, Claim.__table__, ClaimHistory.__table__],
-        )
-        self.db = Session(self.engine, autoflush=False)
-        self.db.add(Customer(
-            customer_id="C1", name="Test", date_of_birth=date(1990, 1, 1),
-            sex="unknown", education_level="unknown", occupation="unknown",
-            hobbies="unknown", relationship="unknown", zip_code="00000",
-        ))
-        self.db.flush()
-        self.db.add(Policy(
-            policy_id="P1", customer_id="C1", policy_number="1",
-            policy_bind_date=date(2020, 1, 1), policy_state="OH", policy_csl="100/300",
-            deductible=100, annual_premium=100, umbrella_limit=0,
-        ))
-        self.db.flush()
-        self.db.add(Claim(
-            claim_id="CLM-001", customer_id="C1", policy_id="P1",
-            incident_date=date(2026, 1, 1), incident_type="collision",
-            incident_location="Original location", number_of_vehicles_involved=1,
-            bodily_injuries=0, witnesses=0, total_claim_amount=100,
-            claim_description="Test claim", status="submitted",
-        ))
-        self.db.commit()
-
-        app = FastAPI()
-        app.include_router(router, prefix="/api/v1")
-        app.dependency_overrides[get_db] = lambda: self.db
-        self.client = TestClient(app)
-        self.url = "/api/v1/claims/CLM-001"
-
-    def tearDown(self):
-        self.client.close()
-        self.db.close()
-        self.engine.dispose()
-
     def assert_state(self, expected_status, history_count):
         # Expire objects to check persisted values, not just Python attributes.
         self.db.expire_all()
@@ -89,8 +39,8 @@ class ClaimStatusTests(unittest.TestCase):
         self.assertEqual(history["old_status"], "submitted")
         self.assertEqual(history["new_status"], "under_review")
         self.assertEqual(history["note"], "Manual review started.")
-        self.assertEqual(history["actor_type"], "reviewer")
-        self.assertIsNone(history["actor_id"])
+        self.assertEqual(history["actor_type"], "employee")
+        self.assertEqual(history["actor_id"], "test-employee")
         self.assertIsInstance(history["created_at"], str)
 
     def test_under_review_to_approved(self):
@@ -202,12 +152,8 @@ class ClaimStatusTests(unittest.TestCase):
         self.assert_state("submitted", 0)
         self.assertEqual(self.db.get(Claim, "CLM-001").incident_location, "Original location")
 
-    def test_generic_patch_without_status_is_unchanged(self):
+    def test_update_claim(self):
         response = self.client.patch(self.url, json={"incident_location": "Updated location"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["incident_location"], "Updated location")
         self.assert_state("submitted", 0)
-
-
-if __name__ == "__main__":
-    unittest.main()

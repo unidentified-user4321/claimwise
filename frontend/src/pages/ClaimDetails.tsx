@@ -41,11 +41,11 @@ export function ClaimDetails() {
     setClaim(null); setError("");
     if (claimId && session) api.getClaim(claimId).then((item) => {
       if (cancelled) return;
-      if (item.customer_id !== session.userId) setError("This claim is not available in your workspace.");
+      if (item.customer_id !== session.customerId) setError("This claim is not available in your workspace.");
       else setClaim(item);
     }).catch((err: Error) => { if (!cancelled) setError(err.message); });
     return () => { cancelled = true; };
-  }, [claimId, session?.userId]);
+  }, [claimId, session?.customerId]);
   if (error) return <ErrorState message={error} />;
   if (!claim) return <LoadingState label="Loading claim..." />;
   return <>

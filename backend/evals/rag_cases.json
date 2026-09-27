@@ -1,0 +1,131 @@
+[
+  {
+    "case_id": "STD-01",
+    "product_code": "MOTOR_STANDARD",
+    "incident_type": "collision",
+    "scenario": "A parked insured car was struck by another vehicle, causing new rear panel damage. Photographs support the impact.",
+    "police_report_available": true,
+    "expected_section": "4. Collision and impact losses",
+    "expected_evidence": [
+      "a parked vehicle struck by another road user",
+      "collision loss"
+    ],
+    "expected_interpretation": "Accidental impact may be covered, including a parked vehicle being struck, subject to evidence, exclusions, and the individual policy terms; payment is not guaranteed."
+  },
+  {
+    "case_id": "STD-02",
+    "product_code": "MOTOR_STANDARD",
+    "incident_type": "weather_damage",
+    "scenario": "A sudden flood entered a parked insured car and damaged the interior. No natural-peril endorsement applies.",
+    "police_report_available": true,
+    "expected_section": "6. Weather, natural perils, and malicious damage",
+    "expected_evidence": [
+      "standard cover does not include direct damage",
+      "flood",
+      "unless an endorsement expressly adds it"
+    ],
+    "expected_interpretation": "Standard cover excludes flood damage unless an endorsement adds it. With no endorsement, the described flood loss is not supported by standard cover."
+  },
+  {
+    "case_id": "STD-03",
+    "product_code": "MOTOR_STANDARD",
+    "incident_type": "theft",
+    "scenario": "The locked insured car was unlawfully stolen from a car park. Keys were retained and theft was reported to police.",
+    "police_report_available": true,
+    "expected_section": "5. Fire, theft, and attempted theft",
+    "expected_evidence": [
+      "theft of the insured vehicle may be covered"
+    ],
+    "expected_interpretation": "Theft of the insured vehicle may be covered subject to terms and supporting information. Police reporting and security/key information matter; no guaranteed payment."
+  },
+  {
+    "case_id": "STD-04",
+    "product_code": "MOTOR_STANDARD",
+    "incident_type": "other",
+    "scenario": "The engine stopped because of worn internal parts. The repairer found mechanical failure with no collision, fire, or other external insured event.",
+    "police_report_available": true,
+    "expected_section": "15. Exclusions",
+    "expected_evidence": [
+      "there is no cover for ordinary wear",
+      "mechanical or electrical failure"
+    ],
+    "expected_interpretation": "Ordinary wear and mechanical failure are excluded; a breakdown alone is not covered accidental collision damage. Separately established insured-event damage would require separate assessment."
+  },
+  {
+    "case_id": "STD-05",
+    "product_code": "MOTOR_STANDARD",
+    "incident_type": "theft",
+    "scenario": "The customer reports an unlawful vehicle theft but has not reported it to police and has no authority reference. What reporting evidence is required?",
+    "police_report_available": false,
+    "expected_section": "10. Police and authority reporting",
+    "expected_evidence": [
+      "an absent police report does not by itself show",
+      "event did not happen"
+    ],
+    "expected_interpretation": "Suspected theft should be reported to police or the appropriate authority. Seek an explanation and other records for the missing report; absence alone neither disproves theft nor proves fraud or automatic ineligibility."
+  },
+  {
+    "case_id": "CMP-01",
+    "product_code": "MOTOR_COMPREHENSIVE",
+    "incident_type": "collision",
+    "scenario": "A parked insured vehicle was hit by another driver. New body damage and photographs support a sudden accidental impact.",
+    "police_report_available": true,
+    "expected_section": "4. Accidental damage, collision, and impact",
+    "expected_evidence": [
+      "a parked car struck by another driver",
+      "collision damage"
+    ],
+    "expected_interpretation": "Sudden accidental collision or impact may be covered, including a parked car being struck. Evidence must connect the claimed damage to the event and individual terms still apply."
+  },
+  {
+    "case_id": "CMP-02",
+    "product_code": "MOTOR_COMPREHENSIVE",
+    "incident_type": "weather_damage",
+    "scenario": "A sudden flood damaged a parked insured vehicle. The damage is new and photographs record the water level; there was no gradual seepage.",
+    "police_report_available": true,
+    "expected_section": "7. Weather and natural perils",
+    "expected_evidence": [
+      "comprehensive policy may cover",
+      "flood"
+    ],
+    "expected_interpretation": "Comprehensive cover may cover direct damage from a sudden flood, subject to terms, exclusions, and evidence linking the damage to the event. Gradual seepage or deterioration is not equivalent."
+  },
+  {
+    "case_id": "CMP-03",
+    "product_code": "MOTOR_COMPREHENSIVE",
+    "incident_type": "vandalism",
+    "scenario": "A third party deliberately scratched and broke a window of a parked insured car. Camera footage supports the report and there was no arrangement involving the customer.",
+    "police_report_available": true,
+    "expected_section": "8. Malicious acts by third parties",
+    "expected_evidence": [
+      "cover may apply to deliberate physical damage",
+      "third party"
+    ],
+    "expected_interpretation": "Malicious physical damage by a third party may be covered subject to exclusions and evidence. Customer-arranged fraudulent damage is excluded; marks alone do not prove malicious intent."
+  },
+  {
+    "case_id": "CMP-04",
+    "product_code": "MOTOR_COMPREHENSIVE",
+    "incident_type": "other",
+    "scenario": "An internal gearbox failed from wear during normal driving. There was no impact, fire, or separately established covered physical damage.",
+    "police_report_available": true,
+    "expected_section": "18. Exclusions and limitations",
+    "expected_evidence": [
+      "there is no cover for ordinary wear",
+      "mechanical or electrical breakdown"
+    ],
+    "expected_interpretation": "Comprehensive cover excludes ordinary wear and mechanical breakdown or maintenance expense unless direct covered physical damage is separately established. This breakdown alone is not supported."
+  },
+  {
+    "case_id": "CMP-05",
+    "product_code": "MOTOR_COMPREHENSIVE",
+    "incident_type": "collision",
+    "scenario": "A customer with two earlier claims reports a new collision. Repair photographs show an old unrepaired dent as well as new impact damage. Assess prior damage and claim history.",
+    "police_report_available": true,
+    "expected_section": "19. Material information and previous claims",
+    "expected_evidence": [
+      "their existence alone does not make a new claim suspicious or ineligible"
+    ],
+    "expected_interpretation": "Prior claims alone do not make the new claim suspicious or ineligible. Review repair history and distinguish old damage from new collision damage; assess the current loss on its own evidence."
+  }
+]

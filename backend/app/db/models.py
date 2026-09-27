@@ -4,7 +4,7 @@ from datetime import date, datetime
 from decimal import Decimal
 from uuid import uuid4
 
-from sqlalchemy import Boolean, Date, DateTime, ForeignKey, Integer, Numeric, String, Text, func
+from sqlalchemy import CheckConstraint, UniqueConstraint, Boolean, Date, DateTime, ForeignKey, Integer, Numeric, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship as orm_relationship
 
 from app.db.database import Base
@@ -192,3 +192,18 @@ class ClaimHistory(Base):
         default=func.now(),
         server_default=func.now(),
     )
+
+class User(Base):
+    __tablename__ = "users"
+    __table_args__ = (
+        UniqueConstraint("clerk_user_id", name="uq_users_clerk_user_id"),
+        CheckConstraint(
+            "(role = 'client' AND customer_id IS NOT NULL) OR "
+            "(role = 'employee' AND customer_id IS NULL)", name="ck_users_role_customer",
+        ),
+    )
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True, default=lambda: uuid4().hex)
+    clerk_user_id: Mapped[str] = mapped_column(String(255))
+    role: Mapped[str] = mapped_column(String(20))
+    customer_id: Mapped[str | None] = mapped_column(ForeignKey("customers.customer_id"), nullable=True)

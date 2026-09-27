@@ -174,3 +174,11 @@ export interface ApiErrorShape {
   error?: { code?: string; message?: string; details?: unknown };
   detail?: string | Array<{ loc?: (string | number)[]; msg: string; type?: string }>;
 }
+
+
+export interface AuthUser {
+  user_id: string;
+  clerk_user_id: string;
+  role: Role;
+  customer_id: string | null;
+}

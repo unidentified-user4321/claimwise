@@ -51,3 +51,5 @@ FRONTEND_ORIGIN = os.getenv(
     "FRONTEND_ORIGIN",
     "http://localhost:5173"
 )
+
+CLERK_SECRET_KEY = os.getenv("CLERK_SECRET_KEY", "")

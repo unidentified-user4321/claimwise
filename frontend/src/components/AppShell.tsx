@@ -96,8 +96,7 @@ export function AppShell() {
         <div className="absolute bottom-6 left-6 right-6">
           <button
             onClick={() => {
-              signOut();
-              navigate("/login");
+              void signOut();
             }}
             className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/50 transition hover:bg-white/10 hover:text-white"
           >

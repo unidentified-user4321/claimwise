@@ -3,21 +3,19 @@
 from datetime import date
 from types import SimpleNamespace
 import unittest
+import pytest
 from unittest.mock import patch
 
 from app.db.models import Claim, Vehicle
 from app.services.claim_similarity import _cosine, _structured_similarity
-from tests import test_claim_status as phase_a
 
 
+@pytest.mark.usefixtures("claim_case")
 class ClaimSimilarityTests(unittest.TestCase):
-    tearDown = phase_a.ClaimStatusTests.tearDown
-
     def setUp(self):
-        phase_a.ClaimStatusTests.setUp(self)
-        Vehicle.__table__.create(self.engine)
-        self.embedding_mock = patch('app.services.claim_similarity.get_embeddings').start()
-        self.addCleanup(patch.stopall)
+        embeddings = patch('app.services.claim_similarity.get_embeddings')
+        self.embedding_mock = embeddings.start()
+        self.addCleanup(embeddings.stop)
         self.embedding_mock.return_value.embed_documents.side_effect = lambda texts: [
             [0.0, 1.0] if text == 'Different incident' else [1.0, 0.0] for text in texts
         ]
@@ -127,7 +125,3 @@ class ClaimSimilarityTests(unittest.TestCase):
     def test_invalid_limit(self):
         for limit in (0, 21):
             self.assertEqual(self.client.get(self.url + f'/similar?limit={limit}').status_code, 422)
-
-
-if __name__ == '__main__':
-    unittest.main()

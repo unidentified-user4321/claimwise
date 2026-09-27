@@ -1,24 +1,29 @@
-# ClaimWise frontend
+# Insurance Claim Analysis frontend
 
-This is the frontend for `insurance_project/backend`. It reuses the ClaimWise design from the reference project.
+React/Vite interface for client claims and employee analysis/review. Follow the
+[root setup guide](../README.md) for the database, backend, models, and Clerk.
 
-From this directory:
+From `frontend/`, copy `.env.example` to `.env.local` on a new checkout. Set
+`VITE_CLERK_PUBLISHABLE_KEY` from the same Clerk instance as the backend and
+`VITE_API_BASE_URL=http://127.0.0.1:8000/api/v1`. Never put backend secrets in Vite variables.
 
-```powershell
-npm.cmd ci
-npm.cmd run dev
+```sh
+npm ci
+npm run dev
+# TypeScript check and production bundle:
+npm run build
 ```
 
-Open http://localhost:5173 and choose Client or Employee. Run FastAPI on port 8000. Configure `VITE_API_BASE_URL` in `.env.local` when using a different API address.
+Use http://localhost:5173 consistently with backend `FRONTEND_ORIGIN`.
+Client/Employee selection chooses the workspace, not an authorization role.
+Clerk handles sign-in, client sign-up, verification, sessions, and sign-out.
+Clients link an existing demo Customer ID once; employees require a locally
+provisioned mapping via `backend/scripts/create_user.py`. The backend database
+role remains authoritative; selecting another workspace cannot grant access.
 
-The temporary local Client workspace uses customer `C1001`. Sessions are saved under `claimwise-insurance-project-session`, independently of the reference application's session. This is a local demo, not authentication or backend access control.
-
-Claims, counts, and analyses come from the API. Lists use the backend's default limit of 50 records. Analysis runs only when the employee presses Run analysis or Refresh analysis. Status decision and history controls remain unavailable because those backend routes are placeholders.
-
-Submission requires an existing customer/policy relationship. Enter a real policy ID, not its policy number. Optional incident fields can be left blank. The backend stores the claim; the UI then opens its details and shows success feedback.
-
-```powershell
-npm.cmd run build
-```
-
-This checks all TypeScript and generates `dist/`.
+The API client obtains a Clerk bearer token for each request. Clients can submit
+and view their own claims. Employees can inspect claims, run/retrieve analyses,
+view similarity/history, and perform review/status actions. Data comes from the
+backend; no AI results are fabricated. Analysis runs on explicit employee action.
+The default claim list limit is 50. Customer linking is a controlled-demo feature,
+not verification of real-world customer ownership. See the root README limitations.

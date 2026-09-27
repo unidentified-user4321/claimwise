@@ -10,11 +10,14 @@ import type {
   ReviewAction,
   ReviewActionResponse,
   NotImplementedResponse,
-  Role,
+  AuthUser,
   StoredClaimAnalysis,
 } from "../types/api";
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000/api/v1").replace(/\/+$/, "");
+
+let getSessionToken: (() => Promise<string | null>) | undefined;
+export function setTokenGetter(getter?: () => Promise<string | null>) { getSessionToken = getter; }
 
 export class ApiError extends Error {
   constructor(
@@ -33,6 +36,8 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   if (options.body !== undefined && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
+  const sentToken = await getSessionToken?.();
+  if (sentToken) headers.set("Authorization", `Bearer ${sentToken}`);
   try {
     response = await fetch(`${API_BASE_URL}${path}`, { ...options, headers });
   } catch {
@@ -67,19 +72,10 @@ function claimPath(claimId: string): string {
   return `/claims/${encodeURIComponent(claimId)}`;
 }
 
-// Local workspace selection only, not authentication. SessionProvider persists the ID.
-async function createLocalSession(role: Role, enteredId: string): Promise<{ role: Role; user_id: string }> {
-  const userId = enteredId.trim();
-  if (!userId) throw new Error(`${role === "client" ? "Customer" : "Employee"} ID is required.`);
-  if (role === "client") {
-    const customer = await request<{ customer_id: string }>(`/customers/${encodeURIComponent(userId)}`);
-    return { role, user_id: customer.customer_id };
-  }
-  return { role, user_id: userId };
-}
-
 export const api = {
-  createLocalSession,
+  linkCustomer: (customer_id: string) =>
+    request<AuthUser>("/auth/link", { method: "POST", body: JSON.stringify({ customer_id }) }),
+  me: () => request<AuthUser>("/auth/me"),
   listClaims: (filters: ClaimFilters = {}): Promise<Claim[]> => {
     const params = new URLSearchParams();
     if (filters.status !== undefined) params.set("status", filters.status);

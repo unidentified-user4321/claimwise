@@ -1,6 +1,7 @@
 """Human review integration tests using the Phase A isolated database fixture."""
 
 import unittest
+import pytest
 from unittest.mock import patch
 
 from sqlalchemy import event
@@ -11,10 +12,8 @@ from app.services.claim_review import perform_review_action
 from tests import test_claim_status as phase_a
 
 
+@pytest.mark.usefixtures("claim_case")
 class ClaimReviewTests(unittest.TestCase):
-    # Reuse setup without inheriting or rerunning the Phase A test methods.
-    setUp = phase_a.ClaimStatusTests.setUp
-    tearDown = phase_a.ClaimStatusTests.tearDown
     assert_state = phase_a.ClaimStatusTests.assert_state
 
     def set_status(self, value):
@@ -42,8 +41,8 @@ class ClaimReviewTests(unittest.TestCase):
         self.assertEqual(history["old_status"], old)
         self.assertEqual(history["new_status"], new)
         self.assertEqual(history["note"], note)
-        self.assertEqual(history["actor_type"], "reviewer")
-        self.assertIsNone(history["actor_id"])
+        self.assertEqual(history["actor_type"], "employee")
+        self.assertEqual(history["actor_id"], "test-employee")
 
     def test_start_review(self):
         self.check_action("submitted", "start_review", "under_review")
@@ -153,7 +152,3 @@ class ClaimReviewTests(unittest.TestCase):
             event.remove(self.engine, "before_cursor_execute", record_statement)
         self.assertFalse(any(sql.startswith("UPDATE CLAIMS") for sql in statements))
         self.assert_state("under_review", 2)
-
-
-if __name__ == "__main__":
-    unittest.main()
