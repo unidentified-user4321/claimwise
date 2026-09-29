@@ -1,0 +1,481 @@
+claim_description,incident_type
+"During the evening, a motorcycle collided with the front of my car. I reported the incident soon afterward.",collision
+"While travelling, a shopping cart rolled into my parked vehicle.",other
+"During the evening, my car suffered water damage during local flooding. I am submitting a claim for the resulting damage.",weather_damage
+"Earlier today, someone damaged my car while it was parked outside.",vandalism
+"During the evening, large hailstones damaged the roof and hood of my car. I contacted the appropriate authorities afterward.",weather_damage
+"In the morning, the vehicle caught fire while parked. The vehicle was inspected after the incident.",fire
+"During the evening, the car was vandalized while parked near my apartment. The vehicle required inspection after the event.",vandalism
+"In the morning, strong winds caused debris to strike my car. I am submitting a claim for the resulting damage.",weather_damage
+"While travelling, two cars collided and my vehicle sustained bumper damage. I reported the incident soon afterward.",collision
+"During the evening, the vehicle door was damaged while loading equipment. The vehicle required inspection after the event.",other
+"During the evening, another driver crashed into my vehicle. The incident occurred without any reported injuries.",collision
+"While travelling, my vehicle was intentionally damaged in a parking lot. I reported the incident soon afterward.",vandalism
+"Yesterday, the vehicle door was damaged while loading equipment. I reported the incident soon afterward.",other
+Someone kicked and dented the doors of my car. The incident occurred without any reported injuries.,vandalism
+"Earlier today, a motorcycle collided with the front of my car.",collision
+"While travelling, my car was taken without permission from the parking area. Visible damage was found on the vehicle.",theft
+"While travelling, i lost control and collided with another vehicle. The vehicle required inspection after the event.",collision
+"While travelling, my vehicle was damaged when I hit a large pothole. The vehicle was inspected after the incident.",other
+"Earlier today, another vehicle hit my car from behind at an intersection. The vehicle was inspected after the incident.",collision
+"While travelling, a fire spread through the interior of the vehicle.",fire
+"Yesterday, smoke appeared from the engine and the car started burning. The vehicle required inspection after the event.",fire
+"While travelling, a shopping cart rolled into my parked vehicle. I reported the incident soon afterward.",other
+"In the morning, two cars collided and my vehicle sustained bumper damage. Visible damage was found on the vehicle.",collision
+"While travelling, someone broke the side mirrors while the car was parked. Visible damage was found on the vehicle.",vandalism
+"Earlier today, my vehicle was missing when I returned to the parking area. The vehicle required inspection after the event.",theft
+"Earlier today, my car was damaged by debris on the highway.",other
+"Yesterday, my car was damaged by flooding after heavy rain. I contacted the appropriate authorities afterward.",weather_damage
+Flood water entered my vehicle after heavy rainfall. The vehicle required inspection after the event.,weather_damage
+"Earlier today, someone deliberately scratched my parked car. The incident occurred without any reported injuries.",vandalism
+"While travelling, a motorcycle collided with the front of my car. Visible damage was found on the vehicle.",collision
+Large hailstones damaged the roof and hood of my car. Visible damage was found on the vehicle.,weather_damage
+"Yesterday, my car was hit while stopped at a traffic signal.",collision
+Storm debris struck my vehicle while it was parked.,weather_damage
+"While travelling, a rock hit and cracked my windshield while driving. I contacted the appropriate authorities afterward.",other
+"Earlier today, storm debris struck my vehicle while it was parked. Visible damage was found on the vehicle.",weather_damage
+"During the evening, my parked car was stolen while I was away. The incident occurred without any reported injuries.",theft
+"Yesterday, my vehicle was intentionally damaged in a parking lot. I am submitting a claim for the resulting damage.",vandalism
+"Earlier today, flames came from under the hood of my car.",fire
+"While travelling, the car was damaged by an object falling in a parking garage. The incident occurred without any reported injuries.",other
+"During the evening, a vehicle struck the side of my car at a junction. Visible damage was found on the vehicle.",collision
+"Earlier today, a tree branch fell on my vehicle during heavy winds. The vehicle required inspection after the event.",weather_damage
+"While travelling, a fire started in the engine compartment.",fire
+"In the morning, my car was taken without permission from the parking area. The vehicle required inspection after the event.",theft
+A fire started in the engine compartment. I am submitting a claim for the resulting damage.,fire
+"During the evening, i lost control and collided with another vehicle. I am submitting a claim for the resulting damage.",collision
+"Yesterday, my car was damaged by flooding after heavy rain. I am submitting a claim for the resulting damage.",weather_damage
+"Yesterday, a rock hit and cracked my windshield while driving. The vehicle required inspection after the event.",other
+"Earlier today, a motorcycle collided with the front of my car. The incident occurred without any reported injuries.",collision
+My car was stolen from outside my house. The incident occurred without any reported injuries.,theft
+"Earlier today, i collided with another car while changing lanes. The vehicle was inspected after the incident.",collision
+"Yesterday, my car suffered water damage during local flooding. The incident occurred without any reported injuries.",weather_damage
+"Yesterday, my car suffered water damage during local flooding. The vehicle was inspected after the incident.",weather_damage
+The car was damaged by an object falling in a parking garage. I contacted the appropriate authorities afterward.,other
+"While travelling, the underside of my vehicle was damaged by road debris.",other
+"Earlier today, someone broke the side mirrors while the car was parked. I am submitting a claim for the resulting damage.",vandalism
+Someone broke the windshield of my parked car.,vandalism
+"During the evening, someone stole my car while it was parked near my office. I reported the incident soon afterward.",theft
+"Earlier today, i discovered that my vehicle had been stolen in the morning. Visible damage was found on the vehicle.",theft
+"While travelling, my vehicle was damaged when I hit a large pothole. Visible damage was found on the vehicle.",other
+I discovered that my vehicle had been stolen in the morning. The vehicle was inspected after the incident.,theft
+"Yesterday, a shopping cart rolled into my parked vehicle. I contacted the appropriate authorities afterward.",other
+Someone damaged my car while it was parked outside. The incident occurred without any reported injuries.,vandalism
+"Earlier today, i collided with another car while changing lanes. The incident occurred without any reported injuries.",collision
+"In the morning, the car was stolen from a public parking facility. I contacted the appropriate authorities afterward.",theft
+"In the morning, the car caught fire shortly after it was started.",fire
+"In the morning, someone kicked and dented the doors of my car.",vandalism
+"Yesterday, flood water entered my vehicle after heavy rainfall. I am submitting a claim for the resulting damage.",weather_damage
+"Yesterday, i hit a parked vehicle while reversing. I am submitting a claim for the resulting damage.",collision
+"While travelling, i hit a parked vehicle while reversing.",collision
+"Earlier today, the car caught fire shortly after it was started. The vehicle required inspection after the event.",fire
+"In the morning, someone kicked and dented the doors of my car. I contacted the appropriate authorities afterward.",vandalism
+"Yesterday, i collided with another car while changing lanes. The vehicle required inspection after the event.",collision
+"During the evening, the vehicle caught fire while parked. The vehicle required inspection after the event.",fire
+"In the morning, someone stole my car while it was parked near my office. I reported the incident soon afterward.",theft
+My car was taken without permission from the parking area. The incident occurred without any reported injuries.,theft
+"Yesterday, my vehicle was damaged by a garage fire.",fire
+The tires of my vehicle were deliberately slashed. The vehicle was inspected after the incident.,vandalism
+The underside of my vehicle was damaged by road debris. The vehicle required inspection after the event.,other
+"In the morning, my parked vehicle was damaged by falling branches in a storm. The incident occurred without any reported injuries.",weather_damage
+"While travelling, another driver crashed into my vehicle. I contacted the appropriate authorities afterward.",collision
+"During the evening, the vehicle door was damaged while loading equipment.",other
+"In the morning, a motorcycle collided with the front of my car.",collision
+"During the evening, the car was stolen from a public parking facility. The vehicle was inspected after the incident.",theft
+My vehicle was damaged when I hit a large pothole. I reported the incident soon afterward.,other
+"During the evening, two cars collided and my vehicle sustained bumper damage. Visible damage was found on the vehicle.",collision
+"In the morning, the windows of my vehicle were smashed. Visible damage was found on the vehicle.",vandalism
+"While travelling, my parked vehicle was damaged by falling branches in a storm. The incident occurred without any reported injuries.",weather_damage
+"In the morning, another driver crashed into my vehicle. I reported the incident soon afterward.",collision
+"Yesterday, the vehicle was damaged during a thunderstorm. I contacted the appropriate authorities afterward.",weather_damage
+My car caught fire while I was driving. The incident occurred without any reported injuries.,fire
+"In the morning, my vehicle was damaged when I hit a large pothole. I contacted the appropriate authorities afterward.",other
+Flames came from under the hood of my car. I am submitting a claim for the resulting damage.,fire
+"While travelling, the engine area suddenly caught fire. The vehicle required inspection after the event.",fire
+The car was damaged by an object falling in a parking garage.,other
+"During the evening, my vehicle was involved in a multi-vehicle accident. The vehicle required inspection after the event.",collision
+"Yesterday, the vehicle door was damaged while loading equipment. The vehicle was inspected after the incident.",other
+My car was stolen from outside my house. Visible damage was found on the vehicle.,theft
+"During the evening, a fire spread through the interior of the vehicle. The vehicle required inspection after the event.",fire
+"Earlier today, an animal ran into my vehicle on the road. I reported the incident soon afterward.",other
+"During the evening, i hit a parked vehicle while reversing. Visible damage was found on the vehicle.",collision
+"Yesterday, storm debris struck my vehicle while it was parked. The vehicle was inspected after the incident.",weather_damage
+My windshield cracked after debris fell from a truck. I reported the incident soon afterward.,other
+"During the evening, the car was stolen from a public parking facility. Visible damage was found on the vehicle.",theft
+"Earlier today, my vehicle was damaged when I hit a large pothole. I contacted the appropriate authorities afterward.",other
+Flames came from under the hood of my car. Visible damage was found on the vehicle.,fire
+A fire spread through the interior of the vehicle. I am submitting a claim for the resulting damage.,fire
+"Yesterday, my windshield cracked after debris fell from a truck. I contacted the appropriate authorities afterward.",other
+My vehicle was involved in a multi-vehicle accident. The incident occurred without any reported injuries.,collision
+"While travelling, a shopping cart rolled into my parked vehicle. The vehicle was inspected after the incident.",other
+I collided with another car while changing lanes. I contacted the appropriate authorities afterward.,collision
+"Earlier today, my parked car was stolen while I was away. The incident occurred without any reported injuries.",theft
+"While travelling, an animal ran into my vehicle on the road. I am submitting a claim for the resulting damage.",other
+"While travelling, my car was stolen from outside my house. Visible damage was found on the vehicle.",theft
+"Earlier today, a shopping cart rolled into my parked vehicle. The vehicle required inspection after the event.",other
+"During the evening, a shopping cart rolled into my parked vehicle. The vehicle was inspected after the incident.",other
+"In the morning, my car was hit while stopped at a traffic signal. I contacted the appropriate authorities afterward.",collision
+A fire spread through the interior of the vehicle. The vehicle required inspection after the event.,fire
+"Earlier today, the car was vandalized while parked near my apartment. The vehicle was inspected after the incident.",vandalism
+"Earlier today, a rock hit and cracked my windshield while driving.",other
+"In the morning, my vehicle was involved in a multi-vehicle accident. Visible damage was found on the vehicle.",collision
+A vehicle struck the side of my car at a junction. Visible damage was found on the vehicle.,collision
+Two cars collided and my vehicle sustained bumper damage. The incident occurred without any reported injuries.,collision
+"Earlier today, a tree branch fell on my vehicle during heavy winds. Visible damage was found on the vehicle.",weather_damage
+"While travelling, i discovered that my vehicle had been stolen in the morning. The vehicle required inspection after the event.",theft
+"In the morning, a vehicle struck the side of my car at a junction. The vehicle required inspection after the event.",collision
+"Earlier today, someone took my vehicle during the night. The vehicle was inspected after the incident.",theft
+"Earlier today, someone took my vehicle during the night. I am submitting a claim for the resulting damage.",theft
+"In the morning, my car suffered water damage during local flooding.",weather_damage
+"During the evening, my windshield cracked after debris fell from a truck.",other
+"Yesterday, an animal ran into my vehicle on the road. I contacted the appropriate authorities afterward.",other
+"Earlier today, someone took my vehicle during the night.",theft
+"Yesterday, my car was damaged by flooding after heavy rain. Visible damage was found on the vehicle.",weather_damage
+My car caught fire while I was driving. I contacted the appropriate authorities afterward.,fire
+A vehicle struck the side of my car at a junction. The vehicle required inspection after the event.,collision
+"Earlier today, smoke appeared from the engine and the car started burning.",fire
+"Yesterday, someone deliberately scratched my parked car. The vehicle was inspected after the incident.",vandalism
+"Yesterday, my vehicle was damaged when I hit a large pothole. I am submitting a claim for the resulting damage.",other
+"Earlier today, a vehicle struck the side of my car at a junction. The vehicle required inspection after the event.",collision
+"While travelling, the vehicle was stolen from outside a shopping center. The vehicle required inspection after the event.",theft
+"Earlier today, my car was hit while stopped at a traffic signal. The incident occurred without any reported injuries.",collision
+Another driver crashed into my vehicle.,collision
+"Earlier today, my car was damaged by debris on the highway. I am submitting a claim for the resulting damage.",other
+"While travelling, my parked vehicle was damaged by falling branches in a storm. The vehicle was inspected after the incident.",weather_damage
+"While travelling, my car was hit while stopped at a traffic signal. I reported the incident soon afterward.",collision
+A loose object on the road struck the underside of my car. The incident occurred without any reported injuries.,other
+I collided with another car while changing lanes. I am submitting a claim for the resulting damage.,collision
+My vehicle was missing when I returned to the parking area. The vehicle required inspection after the event.,theft
+"During the evening, someone kicked and dented the doors of my car. I am submitting a claim for the resulting damage.",vandalism
+"In the morning, the car was vandalized while parked near my apartment.",vandalism
+I lost control and collided with another vehicle. The vehicle was inspected after the incident.,collision
+"Yesterday, someone deliberately scratched my parked car. I contacted the appropriate authorities afterward.",vandalism
+"While travelling, the engine area suddenly caught fire.",fire
+"While travelling, i hit a parked vehicle while reversing. The vehicle was inspected after the incident.",collision
+"During the evening, i collided with another car while changing lanes. Visible damage was found on the vehicle.",collision
+"During the evening, a loose object on the road struck the underside of my car. The vehicle required inspection after the event.",other
+"While travelling, i discovered that my vehicle had been stolen in the morning. Visible damage was found on the vehicle.",theft
+"While travelling, my vehicle was involved in a multi-vehicle accident. The incident occurred without any reported injuries.",collision
+"While travelling, the car was stolen from a public parking facility. I contacted the appropriate authorities afterward.",theft
+"During the evening, a loose object on the road struck the underside of my car. I reported the incident soon afterward.",other
+"Earlier today, my vehicle disappeared from the parking lot overnight. The vehicle required inspection after the event.",theft
+"Yesterday, my parked car was stolen while I was away. Visible damage was found on the vehicle.",theft
+"Yesterday, the car was vandalized while parked near my apartment. The incident occurred without any reported injuries.",vandalism
+"Earlier today, a shopping cart rolled into my parked vehicle. Visible damage was found on the vehicle.",other
+My vehicle disappeared from the parking lot overnight. I reported the incident soon afterward.,theft
+"In the morning, storm debris struck my vehicle while it was parked. The vehicle was inspected after the incident.",weather_damage
+My car suffered water damage during local flooding. The vehicle required inspection after the event.,weather_damage
+"Yesterday, the car was vandalized while parked near my apartment. Visible damage was found on the vehicle.",vandalism
+"While travelling, someone kicked and dented the doors of my car. The vehicle required inspection after the event.",vandalism
+"In the morning, the engine area suddenly caught fire. I reported the incident soon afterward.",fire
+"During the evening, my car was damaged by debris on the highway. I reported the incident soon afterward.",other
+"Earlier today, my vehicle was missing when I returned to the parking area. The vehicle was inspected after the incident.",theft
+"Earlier today, my car suffered water damage during local flooding. I am submitting a claim for the resulting damage.",weather_damage
+"Yesterday, i lost control and collided with another vehicle. The vehicle required inspection after the event.",collision
+"Yesterday, smoke appeared from the engine and the car started burning.",fire
+"During the evening, a fire started in the engine compartment.",fire
+"During the evening, the vehicle was damaged during a thunderstorm. The incident occurred without any reported injuries.",weather_damage
+"Earlier today, flames came from under the hood of my car. The vehicle was inspected after the incident.",fire
+"Earlier today, an electrical fire damaged my vehicle. I contacted the appropriate authorities afterward.",fire
+"While travelling, my vehicle disappeared from the parking lot overnight.",theft
+"Earlier today, an electrical fire damaged my vehicle. I reported the incident soon afterward.",fire
+"Earlier today, someone stole my car while it was parked near my office. The vehicle was inspected after the incident.",theft
+Someone deliberately scratched my parked car. I am submitting a claim for the resulting damage.,vandalism
+"In the morning, my car was taken without permission from the parking area. I am submitting a claim for the resulting damage.",theft
+"Yesterday, my car suffered water damage during local flooding. I reported the incident soon afterward.",weather_damage
+Storm debris struck my vehicle while it was parked. I reported the incident soon afterward.,weather_damage
+"In the morning, my parked car was stolen while I was away. I contacted the appropriate authorities afterward.",theft
+"In the morning, my parked vehicle was damaged by falling branches in a storm.",weather_damage
+"While travelling, flames came from under the hood of my car. The incident occurred without any reported injuries.",fire
+"In the morning, my car was damaged by flooding after heavy rain. The vehicle required inspection after the event.",weather_damage
+"During the evening, the car caught fire shortly after it was started. I contacted the appropriate authorities afterward.",fire
+Another driver crashed into my vehicle. Visible damage was found on the vehicle.,collision
+"Yesterday, someone kicked and dented the doors of my car. I reported the incident soon afterward.",vandalism
+A shopping cart rolled into my parked vehicle. The incident occurred without any reported injuries.,other
+"During the evening, an electrical fire damaged my vehicle.",fire
+"Yesterday, my car was taken without permission from the parking area. The incident occurred without any reported injuries.",theft
+"During the evening, someone damaged my car while it was parked outside.",vandalism
+"During the evening, hail damaged my car during a severe storm. The vehicle was inspected after the incident.",weather_damage
+"Earlier today, the underside of my vehicle was damaged by road debris. I contacted the appropriate authorities afterward.",other
+My car was damaged by flooding after heavy rain. I am submitting a claim for the resulting damage.,weather_damage
+"Earlier today, my vehicle was intentionally damaged in a parking lot. The incident occurred without any reported injuries.",vandalism
+"During the evening, my car was damaged by flooding after heavy rain. Visible damage was found on the vehicle.",weather_damage
+"While travelling, my car suffered water damage during local flooding. The incident occurred without any reported injuries.",weather_damage
+"Earlier today, storm debris struck my vehicle while it was parked. I contacted the appropriate authorities afterward.",weather_damage
+"During the evening, a rock hit and cracked my windshield while driving. I am submitting a claim for the resulting damage.",other
+A motorcycle collided with the front of my car. I reported the incident soon afterward.,collision
+"In the morning, the engine area suddenly caught fire.",fire
+"Earlier today, someone stole my car while it was parked near my office. Visible damage was found on the vehicle.",theft
+"Yesterday, my car suffered water damage during local flooding. I contacted the appropriate authorities afterward.",weather_damage
+"Yesterday, a fire started in the engine compartment. The vehicle required inspection after the event.",fire
+The car was vandalized while parked near my apartment. The vehicle required inspection after the event.,vandalism
+Someone deliberately scratched my parked car. I reported the incident soon afterward.,vandalism
+"Yesterday, two cars collided and my vehicle sustained bumper damage.",collision
+"Earlier today, my vehicle disappeared from the parking lot overnight.",theft
+My car caught fire while I was driving.,fire
+"Earlier today, hail damaged my car during a severe storm. Visible damage was found on the vehicle.",weather_damage
+"Earlier today, a motorcycle collided with the front of my car. I contacted the appropriate authorities afterward.",collision
+A tree branch fell on my vehicle during heavy winds. Visible damage was found on the vehicle.,weather_damage
+"Earlier today, my parked vehicle was damaged by falling branches in a storm. The vehicle was inspected after the incident.",weather_damage
+"During the evening, my parked car was stolen while I was away.",theft
+Someone took my vehicle during the night. I contacted the appropriate authorities afterward.,theft
+"While travelling, smoke appeared from the engine and the car started burning. I am submitting a claim for the resulting damage.",fire
+"During the evening, hail damaged my car during a severe storm. The vehicle required inspection after the event.",weather_damage
+"While travelling, the vehicle caught fire while parked. I am submitting a claim for the resulting damage.",fire
+"In the morning, my vehicle was spray-painted during the night. The vehicle required inspection after the event.",vandalism
+"While travelling, another vehicle hit my car from behind at an intersection. I contacted the appropriate authorities afterward.",collision
+"Yesterday, a tree branch fell on my vehicle during heavy winds. I am submitting a claim for the resulting damage.",weather_damage
+"While travelling, someone stole my car while it was parked near my office. The vehicle required inspection after the event.",theft
+"Yesterday, my vehicle was missing when I returned to the parking area. I reported the incident soon afterward.",theft
+"Yesterday, a vehicle struck the side of my car at a junction. The incident occurred without any reported injuries.",collision
+"During the evening, the vehicle was damaged during a thunderstorm.",weather_damage
+The engine area suddenly caught fire. I am submitting a claim for the resulting damage.,fire
+"Earlier today, a rock hit and cracked my windshield while driving. The vehicle required inspection after the event.",other
+Someone kicked and dented the doors of my car. Visible damage was found on the vehicle.,vandalism
+"During the evening, the engine area suddenly caught fire. I reported the incident soon afterward.",fire
+"Yesterday, someone deliberately scratched my parked car.",vandalism
+"While travelling, my vehicle was spray-painted during the night. I contacted the appropriate authorities afterward.",vandalism
+"Yesterday, my windshield cracked after debris fell from a truck. I reported the incident soon afterward.",other
+"While travelling, smoke appeared from the engine and the car started burning.",fire
+"Earlier today, i discovered that my vehicle had been stolen in the morning. I reported the incident soon afterward.",theft
+"While travelling, someone took my vehicle during the night. The vehicle was inspected after the incident.",theft
+"During the evening, the car caught fire shortly after it was started. I am submitting a claim for the resulting damage.",fire
+Someone broke the windshield of my parked car. The vehicle was inspected after the incident.,vandalism
+Someone took my vehicle during the night. I reported the incident soon afterward.,theft
+A vehicle struck the side of my car at a junction. The incident occurred without any reported injuries.,collision
+"Earlier today, my parked car was stolen while I was away. I reported the incident soon afterward.",theft
+My windshield cracked after debris fell from a truck. I am submitting a claim for the resulting damage.,other
+"Earlier today, two cars collided and my vehicle sustained bumper damage. I am submitting a claim for the resulting damage.",collision
+"Earlier today, the vehicle door was damaged while loading equipment. The vehicle required inspection after the event.",other
+"In the morning, my vehicle disappeared from the parking lot overnight. The vehicle required inspection after the event.",theft
+"In the morning, strong winds caused debris to strike my car.",weather_damage
+"Yesterday, the vehicle was stolen from outside a shopping center. Visible damage was found on the vehicle.",theft
+My vehicle was missing when I returned to the parking area. Visible damage was found on the vehicle.,theft
+"While travelling, the vehicle caught fire while parked.",fire
+A tree branch fell on my vehicle during heavy winds. I am submitting a claim for the resulting damage.,weather_damage
+"Earlier today, my windshield cracked after debris fell from a truck. I am submitting a claim for the resulting damage.",other
+"While travelling, my vehicle was spray-painted during the night. The incident occurred without any reported injuries.",vandalism
+"While travelling, my parked car was stolen while I was away. The vehicle required inspection after the event.",theft
+"During the evening, hail damaged my car during a severe storm. Visible damage was found on the vehicle.",weather_damage
+I discovered that my vehicle had been stolen in the morning. I am submitting a claim for the resulting damage.,theft
+"Earlier today, my car caught fire while I was driving.",fire
+"Yesterday, my vehicle was damaged by a garage fire. The vehicle required inspection after the event.",fire
+"Earlier today, someone kicked and dented the doors of my car. Visible damage was found on the vehicle.",vandalism
+"During the evening, the tires of my vehicle were deliberately slashed. I reported the incident soon afterward.",vandalism
+"In the morning, my vehicle was spray-painted during the night. I am submitting a claim for the resulting damage.",vandalism
+"In the morning, my car was damaged by flooding after heavy rain. I contacted the appropriate authorities afterward.",weather_damage
+"Earlier today, someone deliberately scratched my parked car. I am submitting a claim for the resulting damage.",vandalism
+"While travelling, storm debris struck my vehicle while it was parked.",weather_damage
+"Earlier today, a rock hit and cracked my windshield while driving. I contacted the appropriate authorities afterward.",other
+"During the evening, my vehicle disappeared from the parking lot overnight. I am submitting a claim for the resulting damage.",theft
+"While travelling, someone broke the side mirrors while the car was parked. The vehicle was inspected after the incident.",vandalism
+"Yesterday, smoke appeared from the engine and the car started burning. I am submitting a claim for the resulting damage.",fire
+"In the morning, a rock hit and cracked my windshield while driving. The vehicle was inspected after the incident.",other
+"In the morning, the car caught fire shortly after it was started. I contacted the appropriate authorities afterward.",fire
+"Yesterday, someone stole my car while it was parked near my office.",theft
+"Yesterday, my windshield cracked after debris fell from a truck. Visible damage was found on the vehicle.",other
+"During the evening, my vehicle was intentionally damaged in a parking lot. I reported the incident soon afterward.",vandalism
+"During the evening, someone kicked and dented the doors of my car. I contacted the appropriate authorities afterward.",vandalism
+"Earlier today, the car was damaged by an object falling in a parking garage. Visible damage was found on the vehicle.",other
+"While travelling, someone deliberately scratched my parked car. I contacted the appropriate authorities afterward.",vandalism
+"During the evening, my car was damaged by flooding after heavy rain. I contacted the appropriate authorities afterward.",weather_damage
+"During the evening, an animal ran into my vehicle on the road. I reported the incident soon afterward.",other
+"During the evening, the vehicle was damaged during a thunderstorm. The vehicle required inspection after the event.",weather_damage
+"In the morning, a rock hit and cracked my windshield while driving. I contacted the appropriate authorities afterward.",other
+"While travelling, my parked car was stolen while I was away. The vehicle was inspected after the incident.",theft
+"While travelling, flames came from under the hood of my car. The vehicle required inspection after the event.",fire
+"Yesterday, the windows of my vehicle were smashed. The vehicle was inspected after the incident.",vandalism
+"In the morning, large hailstones damaged the roof and hood of my car.",weather_damage
+"During the evening, someone broke the windshield of my parked car. Visible damage was found on the vehicle.",vandalism
+"In the morning, the vehicle door was damaged while loading equipment. The vehicle was inspected after the incident.",other
+"Yesterday, large hailstones damaged the roof and hood of my car. The incident occurred without any reported injuries.",weather_damage
+"While travelling, smoke appeared from the engine and the car started burning. The vehicle was inspected after the incident.",fire
+"While travelling, hail damaged my car during a severe storm. I contacted the appropriate authorities afterward.",weather_damage
+"Yesterday, a fire spread through the interior of the vehicle. The vehicle required inspection after the event.",fire
+"While travelling, my car was stolen from outside my house. I am submitting a claim for the resulting damage.",theft
+"While travelling, the engine area suddenly caught fire. The vehicle was inspected after the incident.",fire
+"While travelling, someone deliberately scratched my parked car. The vehicle required inspection after the event.",vandalism
+"During the evening, an electrical fire damaged my vehicle. I reported the incident soon afterward.",fire
+"While travelling, the vehicle was stolen from outside a shopping center. I am submitting a claim for the resulting damage.",theft
+"During the evening, my car was taken without permission from the parking area.",theft
+"Yesterday, the vehicle was damaged during a thunderstorm.",weather_damage
+"Yesterday, flames came from under the hood of my car. I am submitting a claim for the resulting damage.",fire
+"In the morning, the vehicle was damaged during a thunderstorm. I am submitting a claim for the resulting damage.",weather_damage
+"Earlier today, my car suffered water damage during local flooding. Visible damage was found on the vehicle.",weather_damage
+"Yesterday, the car was stolen from a public parking facility. I reported the incident soon afterward.",theft
+"During the evening, someone broke the side mirrors while the car was parked.",vandalism
+"During the evening, large hailstones damaged the roof and hood of my car. I reported the incident soon afterward.",weather_damage
+"Yesterday, the vehicle was stolen from outside a shopping center. I am submitting a claim for the resulting damage.",theft
+"Earlier today, hail damaged my car during a severe storm. The vehicle required inspection after the event.",weather_damage
+"While travelling, someone broke the windshield of my parked car.",vandalism
+"In the morning, my vehicle disappeared from the parking lot overnight. I contacted the appropriate authorities afterward.",theft
+"In the morning, the vehicle was damaged during a thunderstorm. The incident occurred without any reported injuries.",weather_damage
+"While travelling, my vehicle was involved in a multi-vehicle accident. The vehicle was inspected after the incident.",collision
+My car was damaged by debris on the highway. I reported the incident soon afterward.,other
+"While travelling, a motorcycle collided with the front of my car. I am submitting a claim for the resulting damage.",collision
+"During the evening, someone damaged my car while it was parked outside. I contacted the appropriate authorities afterward.",vandalism
+"In the morning, the car was stolen from a public parking facility.",theft
+"While travelling, someone broke the side mirrors while the car was parked. I am submitting a claim for the resulting damage.",vandalism
+"Earlier today, the engine area suddenly caught fire. The vehicle was inspected after the incident.",fire
+"Yesterday, my vehicle was missing when I returned to the parking area.",theft
+"In the morning, my car was hit while stopped at a traffic signal. Visible damage was found on the vehicle.",collision
+"Yesterday, i hit a parked vehicle while reversing. The vehicle required inspection after the event.",collision
+"While travelling, i collided with another car while changing lanes. Visible damage was found on the vehicle.",collision
+"In the morning, a fire spread through the interior of the vehicle. I reported the incident soon afterward.",fire
+"While travelling, someone took my vehicle during the night. The vehicle required inspection after the event.",theft
+"While travelling, storm debris struck my vehicle while it was parked. The vehicle was inspected after the incident.",weather_damage
+"Yesterday, my windshield cracked after debris fell from a truck. I am submitting a claim for the resulting damage.",other
+"Yesterday, the vehicle caught fire while parked. I reported the incident soon afterward.",fire
+"While travelling, my vehicle disappeared from the parking lot overnight. Visible damage was found on the vehicle.",theft
+My vehicle was involved in a multi-vehicle accident. The vehicle required inspection after the event.,collision
+"During the evening, the tires of my vehicle were deliberately slashed.",vandalism
+"Earlier today, a rock hit and cracked my windshield while driving. The vehicle was inspected after the incident.",other
+"In the morning, flood water entered my vehicle after heavy rainfall. Visible damage was found on the vehicle.",weather_damage
+"During the evening, my car caught fire while I was driving. I contacted the appropriate authorities afterward.",fire
+"Earlier today, my car was hit while stopped at a traffic signal. The vehicle was inspected after the incident.",collision
+"While travelling, my car was damaged by flooding after heavy rain. Visible damage was found on the vehicle.",weather_damage
+"While travelling, a fire spread through the interior of the vehicle. Visible damage was found on the vehicle.",fire
+"During the evening, someone broke the windshield of my parked car. The vehicle was inspected after the incident.",vandalism
+"While travelling, the tires of my vehicle were deliberately slashed. I contacted the appropriate authorities afterward.",vandalism
+Strong winds caused debris to strike my car.,weather_damage
+"Earlier today, another vehicle hit my car from behind at an intersection. The incident occurred without any reported injuries.",collision
+"While travelling, someone damaged my car while it was parked outside. I am submitting a claim for the resulting damage.",vandalism
+"Earlier today, my vehicle was damaged when I hit a large pothole. I am submitting a claim for the resulting damage.",other
+The car was stolen from a public parking facility. Visible damage was found on the vehicle.,theft
+"Earlier today, smoke appeared from the engine and the car started burning. The vehicle required inspection after the event.",fire
+The vehicle door was damaged while loading equipment. The vehicle required inspection after the event.,other
+"Yesterday, the vehicle caught fire while parked.",fire
+"In the morning, my vehicle was damaged by a garage fire. Visible damage was found on the vehicle.",fire
+"While travelling, my car was stolen from outside my house. I reported the incident soon afterward.",theft
+My vehicle was spray-painted during the night.,vandalism
+"Yesterday, the engine area suddenly caught fire. The vehicle was inspected after the incident.",fire
+"During the evening, a vehicle struck the side of my car at a junction.",collision
+"During the evening, another driver crashed into my vehicle. I am submitting a claim for the resulting damage.",collision
+My car was hit while stopped at a traffic signal. The vehicle required inspection after the event.,collision
+"In the morning, the tires of my vehicle were deliberately slashed. Visible damage was found on the vehicle.",vandalism
+"Earlier today, flood water entered my vehicle after heavy rainfall. I am submitting a claim for the resulting damage.",weather_damage
+"Yesterday, the engine area suddenly caught fire. I reported the incident soon afterward.",fire
+"While travelling, a shopping cart rolled into my parked vehicle. Visible damage was found on the vehicle.",other
+"While travelling, a vehicle struck the side of my car at a junction. The incident occurred without any reported injuries.",collision
+"During the evening, strong winds caused debris to strike my car. Visible damage was found on the vehicle.",weather_damage
+Smoke appeared from the engine and the car started burning. I contacted the appropriate authorities afterward.,fire
+"In the morning, someone deliberately scratched my parked car. The incident occurred without any reported injuries.",vandalism
+Someone broke the side mirrors while the car was parked. Visible damage was found on the vehicle.,vandalism
+"While travelling, a fire spread through the interior of the vehicle. I am submitting a claim for the resulting damage.",fire
+The underside of my vehicle was damaged by road debris.,other
+"During the evening, the vehicle was stolen from outside a shopping center. I am submitting a claim for the resulting damage.",theft
+"In the morning, my vehicle was involved in a multi-vehicle accident. I contacted the appropriate authorities afterward.",collision
+"Yesterday, the car was stolen from a public parking facility. The incident occurred without any reported injuries.",theft
+Someone stole my car while it was parked near my office. I contacted the appropriate authorities afterward.,theft
+"While travelling, my vehicle was damaged when I hit a large pothole.",other
+"While travelling, my car was hit while stopped at a traffic signal. I am submitting a claim for the resulting damage.",collision
+"Earlier today, flood water entered my vehicle after heavy rainfall. I contacted the appropriate authorities afterward.",weather_damage
+"Yesterday, the vehicle door was damaged while loading equipment. The vehicle required inspection after the event.",other
+"Yesterday, another vehicle hit my car from behind at an intersection.",collision
+My vehicle was intentionally damaged in a parking lot. I contacted the appropriate authorities afterward.,vandalism
+My car was hit while stopped at a traffic signal. The vehicle was inspected after the incident.,collision
+"During the evening, my vehicle was missing when I returned to the parking area. The vehicle was inspected after the incident.",theft
+"While travelling, i collided with another car while changing lanes. The vehicle required inspection after the event.",collision
+"During the evening, a shopping cart rolled into my parked vehicle. I reported the incident soon afterward.",other
+"During the evening, an animal ran into my vehicle on the road. The vehicle required inspection after the event.",other
+A fire spread through the interior of the vehicle.,fire
+"During the evening, someone damaged my car while it was parked outside. The incident occurred without any reported injuries.",vandalism
+"In the morning, the vehicle door was damaged while loading equipment. I reported the incident soon afterward.",other
+My car was damaged by debris on the highway. The vehicle was inspected after the incident.,other
+"During the evening, large hailstones damaged the roof and hood of my car. The vehicle was inspected after the incident.",weather_damage
+"During the evening, a fire started in the engine compartment. I reported the incident soon afterward.",fire
+The engine area suddenly caught fire. Visible damage was found on the vehicle.,fire
+"While travelling, the vehicle caught fire while parked. The vehicle was inspected after the incident.",fire
+"While travelling, someone kicked and dented the doors of my car. I contacted the appropriate authorities afterward.",vandalism
+The vehicle door was damaged while loading equipment. The vehicle was inspected after the incident.,other
+"Earlier today, someone broke the windshield of my parked car. The incident occurred without any reported injuries.",vandalism
+"During the evening, my car was damaged by debris on the highway. The incident occurred without any reported injuries.",other
+My windshield cracked after debris fell from a truck.,other
+"Yesterday, my vehicle was spray-painted during the night. The vehicle required inspection after the event.",vandalism
+"While travelling, strong winds caused debris to strike my car. I am submitting a claim for the resulting damage.",weather_damage
+"Earlier today, someone deliberately scratched my parked car. The vehicle was inspected after the incident.",vandalism
+"During the evening, flames came from under the hood of my car. The vehicle was inspected after the incident.",fire
+"During the evening, smoke appeared from the engine and the car started burning. The vehicle was inspected after the incident.",fire
+"During the evening, two cars collided and my vehicle sustained bumper damage. The vehicle was inspected after the incident.",collision
+The engine area suddenly caught fire. I contacted the appropriate authorities afterward.,fire
+"During the evening, the car caught fire shortly after it was started.",fire
+"In the morning, someone broke the side mirrors while the car was parked. The vehicle required inspection after the event.",vandalism
+"Earlier today, the windows of my vehicle were smashed. Visible damage was found on the vehicle.",vandalism
+"In the morning, the car was stolen from a public parking facility. The incident occurred without any reported injuries.",theft
+"Yesterday, a vehicle struck the side of my car at a junction. The vehicle required inspection after the event.",collision
+"Yesterday, strong winds caused debris to strike my car. The vehicle was inspected after the incident.",weather_damage
+"During the evening, another vehicle hit my car from behind at an intersection. I am submitting a claim for the resulting damage.",collision
+"Earlier today, my windshield cracked after debris fell from a truck.",other
+"While travelling, a shopping cart rolled into my parked vehicle. The vehicle required inspection after the event.",other
+"Yesterday, i collided with another car while changing lanes. I am submitting a claim for the resulting damage.",collision
+"Earlier today, my vehicle disappeared from the parking lot overnight. Visible damage was found on the vehicle.",theft
+"Yesterday, flames came from under the hood of my car. The vehicle was inspected after the incident.",fire
+"Yesterday, a vehicle struck the side of my car at a junction. The vehicle was inspected after the incident.",collision
+"In the morning, someone broke the windshield of my parked car. Visible damage was found on the vehicle.",vandalism
+"Earlier today, my car was damaged by flooding after heavy rain. Visible damage was found on the vehicle.",weather_damage
+"In the morning, my car was stolen from outside my house. The vehicle required inspection after the event.",theft
+"Yesterday, flood water entered my vehicle after heavy rainfall. The vehicle required inspection after the event.",weather_damage
+"In the morning, my car was damaged by debris on the highway.",other
+"Earlier today, another driver crashed into my vehicle. Visible damage was found on the vehicle.",collision
+My car suffered water damage during local flooding. The incident occurred without any reported injuries.,weather_damage
+"In the morning, the tires of my vehicle were deliberately slashed.",vandalism
+"During the evening, the tires of my vehicle were deliberately slashed. I am submitting a claim for the resulting damage.",vandalism
+"During the evening, a vehicle struck the side of my car at a junction. The incident occurred without any reported injuries.",collision
+"While travelling, my vehicle was spray-painted during the night. The vehicle was inspected after the incident.",vandalism
+"In the morning, my car was taken without permission from the parking area. I contacted the appropriate authorities afterward.",theft
+"In the morning, storm debris struck my vehicle while it was parked. The incident occurred without any reported injuries.",weather_damage
+"During the evening, my vehicle was spray-painted during the night. I contacted the appropriate authorities afterward.",vandalism
+"In the morning, flames came from under the hood of my car.",fire
+My car suffered water damage during local flooding. I contacted the appropriate authorities afterward.,weather_damage
+"During the evening, my vehicle was damaged when I hit a large pothole. Visible damage was found on the vehicle.",other
+"Yesterday, someone stole my car while it was parked near my office. The incident occurred without any reported injuries.",theft
+"During the evening, someone kicked and dented the doors of my car.",vandalism
+"While travelling, a rock hit and cracked my windshield while driving. The vehicle was inspected after the incident.",other
+"In the morning, someone deliberately scratched my parked car. The vehicle was inspected after the incident.",vandalism
+My vehicle was intentionally damaged in a parking lot. I reported the incident soon afterward.,vandalism
+Another driver crashed into my vehicle. The vehicle was inspected after the incident.,collision
+"In the morning, flood water entered my vehicle after heavy rainfall. I contacted the appropriate authorities afterward.",weather_damage
+"Earlier today, my vehicle was involved in a multi-vehicle accident.",collision
+My vehicle was damaged by a garage fire. I reported the incident soon afterward.,fire
+"In the morning, flames came from under the hood of my car. The vehicle was inspected after the incident.",fire
+"During the evening, the vehicle door was damaged while loading equipment. I reported the incident soon afterward.",other
+"During the evening, my car caught fire while I was driving. I am submitting a claim for the resulting damage.",fire
+"In the morning, a fire spread through the interior of the vehicle. The vehicle required inspection after the event.",fire
+"During the evening, another vehicle hit my car from behind at an intersection. Visible damage was found on the vehicle.",collision
+"Earlier today, my vehicle was involved in a multi-vehicle accident. Visible damage was found on the vehicle.",collision
+"While travelling, flood water entered my vehicle after heavy rainfall. The vehicle required inspection after the event.",weather_damage
+"Yesterday, an electrical fire damaged my vehicle. I am submitting a claim for the resulting damage.",fire
+"Yesterday, the windows of my vehicle were smashed. I reported the incident soon afterward.",vandalism
+"In the morning, i hit a parked vehicle while reversing. I contacted the appropriate authorities afterward.",collision
+"During the evening, someone broke the windshield of my parked car. I reported the incident soon afterward.",vandalism
+"During the evening, my car caught fire while I was driving.",fire
+"Earlier today, someone damaged my car while it was parked outside. The vehicle required inspection after the event.",vandalism
+"In the morning, the underside of my vehicle was damaged by road debris. I reported the incident soon afterward.",other
+"In the morning, my vehicle was damaged by a garage fire.",fire
+"Earlier today, the vehicle was damaged during a thunderstorm.",weather_damage
+"Earlier today, someone broke the windshield of my parked car. The vehicle required inspection after the event.",vandalism
+"In the morning, a shopping cart rolled into my parked vehicle. The vehicle was inspected after the incident.",other
+"During the evening, hail damaged my car during a severe storm. I am submitting a claim for the resulting damage.",weather_damage
+"Earlier today, someone broke the side mirrors while the car was parked. The vehicle was inspected after the incident.",vandalism
+"In the morning, the car was vandalized while parked near my apartment. The incident occurred without any reported injuries.",vandalism
+"Yesterday, someone took my vehicle during the night. I reported the incident soon afterward.",theft
+"While travelling, my vehicle was missing when I returned to the parking area. Visible damage was found on the vehicle.",theft
+"In the morning, my vehicle disappeared from the parking lot overnight. The incident occurred without any reported injuries.",theft
+"In the morning, hail damaged my car during a severe storm. The vehicle required inspection after the event.",weather_damage
+"During the evening, my vehicle disappeared from the parking lot overnight. The incident occurred without any reported injuries.",theft
+My car was damaged by flooding after heavy rain. The incident occurred without any reported injuries.,weather_damage
+"Yesterday, my parked car was stolen while I was away. I reported the incident soon afterward.",theft
+The vehicle door was damaged while loading equipment. I am submitting a claim for the resulting damage.,other
+"During the evening, storm debris struck my vehicle while it was parked. Visible damage was found on the vehicle.",weather_damage
+"In the morning, the vehicle caught fire while parked. Visible damage was found on the vehicle.",fire
+"During the evening, a shopping cart rolled into my parked vehicle. The vehicle required inspection after the event.",other
+"Yesterday, my car was stolen from outside my house. The incident occurred without any reported injuries.",theft
+"While travelling, an animal ran into my vehicle on the road. Visible damage was found on the vehicle.",other
+"Earlier today, a motorcycle collided with the front of my car. Visible damage was found on the vehicle.",collision
+"Earlier today, my vehicle was damaged by a garage fire. The vehicle was inspected after the incident.",fire
+"During the evening, my vehicle was involved in a multi-vehicle accident. I contacted the appropriate authorities afterward.",collision
+"Earlier today, someone took my vehicle during the night. I contacted the appropriate authorities afterward.",theft
+"Earlier today, someone damaged my car while it was parked outside. I reported the incident soon afterward.",vandalism
+"During the evening, my car suffered water damage during local flooding. Visible damage was found on the vehicle.",weather_damage
+"Yesterday, the vehicle door was damaged while loading equipment. Visible damage was found on the vehicle.",other
+My vehicle disappeared from the parking lot overnight. I am submitting a claim for the resulting damage.,theft
