@@ -62,11 +62,18 @@ mlflow.set_experiment(EXPERIMENT_NAME)
 # Configuration
 
 
+
+
+
+
+
+
 TEST_SIZE = 0.20
 RANDOM_STATE = 42
 
 # Optimized XGBoost classification threshold
-XGB_THRESHOLD = 0.25
+# XGB_THRESHOLD = 0.25
+XGB_THRESHOLD = 0.45
 
 
 
@@ -468,13 +475,24 @@ rf_pipeline = Pipeline(
         (
             "classifier",
             RandomForestClassifier(
-                n_estimators=300,
-                random_state=RANDOM_STATE,
-                class_weight="balanced",
-            ),
+    n_estimators=300,
+    max_depth=10,
+    min_samples_split=4,
+    min_samples_leaf=2,
+    max_features="sqrt",
+    class_weight="balanced",
+    random_state=RANDOM_STATE,
+    n_jobs=-1,
+),
         ),
     ]
 )
+
+
+
+
+
+
 
 
 print("\n========================================")
@@ -573,30 +591,35 @@ xgb_pipeline = Pipeline(
         (
             "classifier",
             XGBClassifier(
-                objective="binary:logistic",
+    objective="binary:logistic",
 
-                n_estimators=500,
-                max_depth=3,
-                learning_rate=0.03,
+    n_estimators=500,
+    max_depth=4,
+    learning_rate=0.04,
 
-                subsample=0.8,
-                colsample_bytree=0.6,
+    subsample=0.8,
+    colsample_bytree=0.6,
 
-                min_child_weight=1,
-                gamma=0.05,
+    min_child_weight=1,
+    gamma=0.05,
 
-                reg_alpha=0.5,
-                reg_lambda=2.0,
+    reg_alpha=0.5,
+    reg_lambda=2.0,
 
-                scale_pos_weight=optimized_scale_pos_weight,
+    scale_pos_weight=optimized_scale_pos_weight,
 
-                eval_metric="logloss",
-                random_state=RANDOM_STATE,
-                n_jobs=-1,
-            ),
+    eval_metric="logloss",
+    random_state=RANDOM_STATE,
+    n_jobs=-1,
+),
         ),
     ]
 )
+
+
+
+
+
 
 
 print("\n========================================")
