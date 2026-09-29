@@ -24,8 +24,8 @@ ml/artifacts/*
 !ml/artifacts/.gitkeep
 
 # ML datasets
-ml/data/*
-!ml/data/.gitkeep
+# ml/data/*
+# !ml/data/.gitkeep
 
 # Jupyter
 .ipynb_checkpoints/
@@ -35,3 +35,7 @@ mlruns/
 ml/mlruns/
 ml/mlflow.db
 ml/mlflow.db-*
+
+# MLflow SQLite databases anywhere under ml/
+ml/**/mlflow.db
+ml/**/mlflow.db-*
